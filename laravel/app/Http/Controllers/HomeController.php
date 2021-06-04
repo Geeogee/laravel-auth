@@ -9,21 +9,11 @@ use App\Pilot;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('auth');
     }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
+    
     public function index()
     {
         $cars = Car::where('deleted', false) -> get();
@@ -69,7 +59,7 @@ class HomeController extends Controller
     public function delete($id) {
 
         $car = Car::findOrFail($id);
-        
+
         $car -> deleted = true;
         $car -> save();
 
