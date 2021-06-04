@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+{{-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -19,5 +19,20 @@
             </div>
         </div>
     </div>
+</div> --}}
+
+<div class="container">
+    <h1>
+        Cars:
+    </h1>
+    <ul>
+        @foreach ($cars as $car)
+            <li>
+                <a href="{{ route('show', $car -> id) }}">
+                    {{ $car -> name }}
+                </a>
+            </li>
+        @endforeach
+    </ul>
 </div>
 @endsection
