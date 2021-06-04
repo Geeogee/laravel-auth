@@ -28,11 +28,25 @@
         </h1>
         <ul>
             @foreach ($cars as $car)
-                <li>
-                    <a href="{{ route('show', $car -> id) }}">
-                        {{ $car -> name }}
-                    </a>
-                </li>
+            <li>
+                <ul class="car">
+                    <li class="car-name">
+                        <a href="{{ route('show', $car -> id) }}">
+                            {{ $car -> name }}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('edit', $car -> id) }}">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('delete', $car -> id )}}">
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+                    </li>
+                </ul>
+            </li>
             @endforeach
         </ul>
     </div>

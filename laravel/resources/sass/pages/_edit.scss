@@ -1,0 +1,12 @@
+section#edit-car {
+
+    .container {
+
+        @include container(80%);
+        
+        form {
+
+            @include flex(column, center, center);
+        }
+    }
+}

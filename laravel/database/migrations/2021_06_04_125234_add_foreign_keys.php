@@ -26,12 +26,14 @@ class AddForeignKeys extends Migration
             $table 
                 -> foreign('car_id', 'car_pilot')
                 -> references('id')
-                -> on('cars');
+                -> on('cars')
+                -> onDelete('cascade');
             
             $table 
                 -> foreign('pilot_id', 'pilot_car')
                 -> references('id')
-                -> on('pilots');
+                -> on('pilots')
+                -> onDelete('cascade');
         });
     }
 

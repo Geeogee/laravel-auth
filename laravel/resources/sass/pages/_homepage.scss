@@ -5,5 +5,25 @@ section#car-list {
         @include container(80%);
         @include flex(column, null, center);
     }
+
+    ul {
+
+        list-style-type: none;
+    }
+
+    .car {
+
+        @include flex(row, null, center);
+
+        .car-name {
+
+            min-width: 300px;
+        }
+
+        .fa-edit, .fa-trash-alt {
+
+            margin: 0 5px;
+        }
+    }
 }
 

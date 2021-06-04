@@ -16,11 +16,42 @@ section#car-list .container {
   align-items: center;
 }
 
+section#car-list ul {
+  list-style-type: none;
+}
+
+section#car-list .car {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+section#car-list .car .car-name {
+  min-width: 300px;
+}
+
+section#car-list .car .fa-edit,
+section#car-list .car .fa-trash-alt {
+  margin: 0 5px;
+}
+
 section#car-infos .container {
   margin: 0 auto;
   width: 80%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+section#edit-car .container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+section#edit-car .container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
