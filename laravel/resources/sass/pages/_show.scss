@@ -1,9 +1,7 @@
-section#car-list {
-    
+section#car-infos {
     .container {
-        
+    
         @include container(80%);
         @include flex(column, null, center);
     }
 }
-

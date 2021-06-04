@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<section id="car-infos">
     <div class="container">
         <ul>
             <li>
@@ -31,4 +32,5 @@
             </li>
         </ul>
     </div>
+</section>
 @endsection
